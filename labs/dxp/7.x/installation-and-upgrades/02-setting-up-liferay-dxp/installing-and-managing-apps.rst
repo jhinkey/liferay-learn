@@ -5,8 +5,8 @@ Installing Apps Manually
    :maxdepth: 2
    
    installing-and-managing-apps/downloading-apps.md
-   installing-and-managing-apps/app-installation-strategies.md
-   installing-and-managing-apps/installing-apps-in-production.md
+   installing-and-managing-apps/installing-apps-via-the-file-system.md
+   installing-and-managing-apps/installing-apps-via-the-ui.md
    installing-and-managing-apps/managing-apps.md
    installing-and-managing-apps/configuring-portlets-themes-and-layout-templates.md
    installing-and-managing-apps/blacklisting-apps.md
