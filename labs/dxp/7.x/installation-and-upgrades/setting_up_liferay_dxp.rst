@@ -7,7 +7,7 @@ Setting Up Liferay DXP
    02-setting-up-liferay-dxp/setting-up-liferay-dxp.md
    02-setting-up-liferay-dxp/connecting-to-a-mail-server.md
    02-setting-up-liferay-dxp/mail-server-configuration-reference.md
-   02-setting-up-liferay-dxp/using-the-liferay-marketplace.md
+   02-setting-up-liferay-dxp/introduction-to-managing-apps.md
    02-setting-up-liferay-dxp/installing-and-managing-apps.rst
    02-setting-up-liferay-dxp/configuring_the_document_library_repository.rst
    02-setting-up-liferay-dxp/configuring_clustering_for_high_availability.rst
