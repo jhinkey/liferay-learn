@@ -12,7 +12,5 @@ Patching Liferay
    patching-liferay/configuring-the-patching-tool.md
    patching-liferay/getting-patch-information.md
 
-   patching-liferay/advanced_patching.rst
-
 .. include:: /installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/README.rst
 	:start-line: 2
