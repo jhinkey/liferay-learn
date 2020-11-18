@@ -17,7 +17,7 @@ You must satisfy all dependencies to compile and deploy a module successfully. A
 
     ```groovy
     dependencies {
-        compileOnly group: "com.liferay.portal", name: "release.portal.api"
+        compileOnly group: "com.liferay.portal", name: "release.dxp.api"
     }
     ```
 
@@ -25,7 +25,7 @@ You must satisfy all dependencies to compile and deploy a module successfully. A
 
     ```groovy
     dependencies {
-        compileOnly group: "com.liferay.portal", name: "release.portal.api",
+        compileOnly group: "com.liferay.portal", name: "release.dxp.api",
         compileInclude group: 'com.google.guava', name: 'guava', version: '19.0'
     }
     ```
