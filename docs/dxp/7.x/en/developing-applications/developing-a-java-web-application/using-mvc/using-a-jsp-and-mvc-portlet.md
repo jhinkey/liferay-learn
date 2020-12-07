@@ -6,7 +6,7 @@ The W3E7 example application demonstrates this approach.
 
 ![Here is the example portlet application.](./using-a-jsp-and-mvc-portlet/images/01.png)
 
-The application has a JSP with markup content and an `MVCPortlet` class that renders the JSP. Here you will deploy the example and examine it to learn how to create applications using a JSP with an MVC portlet. 
+The application has a JSP with markup content and an `MVCPortlet` class that renders the JSP. Here you will deploy the example and examine it to learn how to create an application using a JSP with an MVC portlet. 
 
 ## Deploy a Simple MVC Portlet Module
 
@@ -15,7 +15,7 @@ Start with deploying the example.
 1. Download and unzip the example.
 
    ```bash
-   curl https://learn.liferay.com/dxp-7.x/developing-applications/using-mvc/liferay-w3e7.zip -O
+   curl https://learn.liferay.com/dxp/7.x/en/developing-applications/using-mvc/liferay-w3e7.zip -O
    ```
 
    ```bash
@@ -50,7 +50,7 @@ Start with deploying the example.
 
 Congratulations, you've successfully built and deployed a new application.
 
-Next, learn how the example works.
+Next, learn how to create this portlet.
 
 ## How to Create an Application Using MVC Portlet
 
@@ -65,11 +65,11 @@ In the module's `src/main/resources/META-INF/resources` folder, create a JSP fil
 
 ```javascript
 <p>
-	<b>Hello W3E7.</b>
+	<b>Hello W3E7</b>
 </p>
 ```
 
-The markup above displays "Hello W3E7." in bold.
+The markup above displays "Hello W3E7" in bold.
 
 ### Create an MVCPortlet
 
@@ -81,10 +81,10 @@ public class W3E7Portlet extends MVCPortlet {
 ```
 
 ```note::
-   The ``-web.internal.portlet`` part of the package name is a convention: `web` for the web module type, ``internal`` because a portlet implementation is private, and ``portlet`` because the class is a portlet.
+   The ``*.web.internal.portlet`` part of the package name is a convention: `web` for the web module type, ``internal`` because a portlet implementation is private, and ``portlet`` because the class is a portlet.
 ```
 
-This extension doesn't require any additional methods; `MVCPortlet`'s built-in methods render the `view.jsp` template. Component annotations (discussed next) configure the portlet to display the template.
+This extension doesn't require any additional methods; `MVCPortlet`'s built-in methods use the component annotations (added next) to render the `view.jsp` template.
 
 ### Configure the Portlet With Annotations
 
@@ -106,9 +106,9 @@ public class W3E7Portlet extends MVCPortlet {
 
 The `service = Portlet.class` attribute registers the class as a `Portlet`.
 
-The display property values describe the portlet web application. The `javax.portlet.display-name=W3E7 Portlet` property specifies the app's name. The `com.liferay.portlet.display-category=category.sample` property adds the app to the sample widget category.
+The display property values describe the portlet web application. The `com.liferay.portlet.display-category=category.sample` property adds the app to the sample widget category. The `javax.portlet.display-name=W3E7 Portlet` property specifies the app's name.
 
-The template path initialization parameter `javax.portlet.init-param.template-path` declares the starting location in the `resources/META-INF/resources` for finding the view templates. `javax.portlet.init-param.template-path=/` means the view template path root is the `resources/META-INF/resources/` folder. The `javax.portlet.init-param.view-template=/view.jsp` property declares the portlet's view template `resources/META-INF/resources/view.jsp`. When you add the portlet to a page, the view template renders.
+The template path initialization parameter `javax.portlet.init-param.template-path` declares the starting location in the `resources/META-INF/resources` for finding the view templates. `javax.portlet.init-param.template-path=/` means the view template path root is the module's `resources/META-INF/resources/` folder. The `javax.portlet.init-param.view-template=/view.jsp` property declares the portlet's view template `resources/META-INF/resources/view.jsp`. When you add the portlet to a page, the view template renders.
 
 ```note::
    The `Portlet Descriptor to OSGi Service Property Map <../../reference/portlet-descriptor-to-osgi-service-property-map.md>`_ specifies how OSGi component property values map to traditional portlet descriptors.
