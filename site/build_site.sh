@@ -178,11 +178,16 @@ function generate_static_html {
 
 		for zip_dir_name in $(find build/input/"${product_version_language_dir_name}" -name *.zip -type d)
 		do
-			pushd "${zip_dir_name}"
+			local zip_parent_dir_name=$(dirname "${zip_dir_name}")
+
+			pushd ${zip_parent_dir_name}
 
 			local zip_file_name=$(basename "${zip_dir_name}")
+			local zip_file_leading_dir_name="${zip_file_name%.*}"
 
-			7z a ${zip_file_name} ../${zip_file_name}\
+			mv ${zip_file_name} ${zip_file_leading_dir_name} 
+
+			7z a ${zip_file_name} ${zip_file_leading_dir_name}\
 
 			local output_dir_name=$(dirname "${zip_dir_name}")
 
@@ -194,7 +199,7 @@ function generate_static_html {
 
 			mkdir -p "${output_dir_name}"
 
-			mv "${zip_dir_name}"/"${zip_file_name}" "${output_dir_name}"
+			mv "${zip_parent_dir_name}"/"${zip_file_name}" "${output_dir_name}"
 		done
 	done
 
