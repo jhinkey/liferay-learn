@@ -45,9 +45,9 @@ Here are the steps for upgrading with a Docker image:
 
     * `/log/*`: Log files.
 
-    * `/osgi/*.config`: OSGi configuration files.
+    * `/osgi/*.config`: [OSGi configuration files](../../../system-administration/configuring-liferay/understanding-configuration-scope.md).
 
-    * `portal-*.properties`: Portal properties files, such as `portal-ext.properties`.
+    * `portal-*.properties`: [Portal properties](../../reference/portal-properties.md) files, such as `portal-ext.properties`.
 
     * `setenv.sh`, `startup.sh`, and more: Application server configuration scripts.
 
