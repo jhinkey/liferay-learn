@@ -53,6 +53,8 @@ Here are the steps for upgrading with a Docker image:
 
     * `web.xml`: Portal web application descriptor.
 
+1. Configure the Docker image to use a [file store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) from your [backup](../../maintaining-a-liferay-dxp-installation/backing-up.md)  via a [`.config` file](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) in your new `new-version/osgi` folder.
+
 1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
 
 1. Run the Docker image [mounted](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
