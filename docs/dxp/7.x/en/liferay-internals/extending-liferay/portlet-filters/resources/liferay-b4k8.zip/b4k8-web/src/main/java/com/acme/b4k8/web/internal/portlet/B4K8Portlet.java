@@ -29,8 +29,6 @@ public class B4K8Portlet extends MVCPortlet {
 
 	public static final String B4K8_PORTLET_NAME = "b4k8_portlet";
 
-	public static final String LOAD_USERS_ACTION = "loadUsers";
-
 	public static final String MEMBERLIST_ATTRIBUTE = "memberlist";
 
 	public void loadUsers(
