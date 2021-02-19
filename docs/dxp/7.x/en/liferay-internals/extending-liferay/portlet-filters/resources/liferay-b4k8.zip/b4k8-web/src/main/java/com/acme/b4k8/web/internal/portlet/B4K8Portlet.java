@@ -33,7 +33,7 @@ public class B4K8Portlet extends MVCPortlet {
 		actionRequest.setAttribute(B4K8WebConstants.MEMBERS, _members);
 	}
 
-	private List<Person> _members = Arrays.asList(
+	private final List<Person> _members = Arrays.asList(
 		new Person("Sievert Shayne", "Sievert.Shayne@example.org"),
 		new Person("Vida Jonas", "Vida.Jonas@example.net"),
 		new Person("Nikola Septima", "Nikola.Septima@example.com"),
