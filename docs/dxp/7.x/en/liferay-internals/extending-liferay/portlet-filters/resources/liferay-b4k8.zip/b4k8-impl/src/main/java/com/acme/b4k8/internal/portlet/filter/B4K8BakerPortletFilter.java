@@ -20,7 +20,6 @@ import javax.portlet.filter.RenderFilter;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"javax.portlet.name=" + B4K8PortletKeys.B4K8,
 		"service.ranking:Integer=100"
@@ -46,17 +45,17 @@ public class B4K8BakerPortletFilter implements RenderFilter {
 		_hits.increment();
 		_accumulatedTimeMs.add(renderTime);
 
-		if (_log.isDebugEnabled()) {
+		if (_log.isWarnEnabled()) {
 			long totalHits = _hits.longValue();
 
 			long averageRenderTimeNs =
 				_accumulatedTimeMs.longValue() / totalHits;
 
-			_log.debug(
+			_log.warn(
 				B4K8PortletKeys.B4K8 + " rendered in " + renderTime + " ms");
 
-			_log.debug(
-				B4K8PortletKeys.B4K8 + " rendered " + _hits.longValue() +
+			_log.warn(
+				B4K8PortletKeys.B4K8 + " rendered " + totalHits +
 					" times with an average " + averageRenderTimeNs +
 						" ms render time");
 		}
