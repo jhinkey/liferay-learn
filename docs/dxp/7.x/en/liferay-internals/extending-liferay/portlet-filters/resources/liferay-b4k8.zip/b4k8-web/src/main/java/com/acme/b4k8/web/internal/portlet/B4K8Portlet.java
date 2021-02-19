@@ -1,8 +1,8 @@
 package com.acme.b4k8.web.internal.portlet;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
-import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
 import com.acme.b4k8.model.Person;
+import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
