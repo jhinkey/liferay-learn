@@ -21,7 +21,6 @@ import javax.portlet.filter.RenderFilter;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
-	immediate = true,
 	property = {
 		"javax.portlet.name=" + B4K8PortletKeys.B4K8,
 		"service.ranking:Integer=1"
