@@ -27,7 +27,7 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = PortletFilter.class
 )
-public class B4K8AblePortletFilter implements RenderFilter {
+public class B4K8PortletFilter implements RenderFilter {
 
 	@Override
 	public void destroy() {
