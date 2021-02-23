@@ -6,9 +6,9 @@ import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
 
 import java.io.IOException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
@@ -54,20 +54,20 @@ public class B4K8PortletFilter implements RenderFilter {
 	}
 
 	private List<Person> _obfuscateEmailAddresses(List<Person> persons) {
-		return persons.stream(
-		).map(
-			this::_obfuscatePersonEmailAddress
-		).collect(
-			Collectors.toList()
-		);
-	}
+		List<Person> newPersons = new ArrayList<>();
 
-	private Person _obfuscatePersonEmailAddress(Person person) {
-		String emailAddress = person.getEmailAddress();
+		for (Person person : persons) {
+			String emailAddress = person.getEmailAddress();
 
-		return new Person(
-			person.getName(),
-			emailAddress.replaceFirst("(.+)(...)@(...)(.*)", "$1...@...$4"));
+			Person newPerson = new Person(
+				person.getName(),
+				emailAddress.replaceFirst(
+					"(.+)(...)@(...)(.*)", "$1...@...$4"));
+
+			newPersons.add(newPerson);
+		}
+
+		return newPersons;
 	}
 
 }
