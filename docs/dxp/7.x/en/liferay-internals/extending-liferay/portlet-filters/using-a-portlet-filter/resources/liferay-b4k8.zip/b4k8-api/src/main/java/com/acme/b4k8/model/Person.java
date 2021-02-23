@@ -2,20 +2,20 @@ package com.acme.b4k8.model;
 
 public class Person {
 
-	public Person(String name, String email) {
+	public Person(String name, String emailAddress) {
 		_name = name;
-		_email = email;
+		_emailAddress = emailAddress;
 	}
 
-	public String getEmail() {
-		return _email;
+	public String getEmailAddress() {
+		return _emailAddress;
 	}
 
 	public String getName() {
 		return _name;
 	}
 
-	private final String _email;
+	private final String _emailAddress;
 	private final String _name;
 
 }
