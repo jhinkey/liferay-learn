@@ -35,38 +35,39 @@ public class B4K8PortletFilter implements RenderFilter {
 
 	@Override
 	public void doFilter(
-			RenderRequest request, RenderResponse response, FilterChain chain)
+			RenderRequest renderRequest, RenderResponse renderResponse,
+			FilterChain filterChain)
 		throws IOException, PortletException {
 
 		Optional.ofNullable(
-			(List<Person>)request.getAttribute(B4K8WebConstants.MEMBERS)
+			(List<Person>)renderRequest.getAttribute(B4K8WebConstants.MEMBERS)
 		).ifPresent(
-			persons -> request.setAttribute(
-				B4K8WebConstants.MEMBERS, _obfuscateEmails(persons))
+			persons -> renderRequest.setAttribute(
+				B4K8WebConstants.MEMBERS, _obfuscateEmailAddresses(persons))
 		);
 
-		chain.doFilter(request, response);
+		filterChain.doFilter(renderRequest, renderResponse);
 	}
 
 	@Override
 	public void init(FilterConfig filterConfig) throws PortletException {
 	}
 
-	private List<Person> _obfuscateEmails(List<Person> persons) {
+	private List<Person> _obfuscateEmailAddresses(List<Person> persons) {
 		return persons.stream(
 		).map(
-			this::_obfuscatePersonEmail
+			this::_obfuscatePersonEmailAddress
 		).collect(
 			Collectors.toList()
 		);
 	}
 
-	private Person _obfuscatePersonEmail(Person person) {
-		String email = person.getEmail();
+	private Person _obfuscatePersonEmailAddress(Person person) {
+		String emailAddress = person.getEmailAddress();
 
 		return new Person(
 			person.getName(),
-			email.replaceFirst("(.+)(...)@(...)(.*)", "$1...@...$4"));
+			emailAddress.replaceFirst("(.+)(...)@(...)(.*)", "$1...@...$4"));
 	}
 
 }

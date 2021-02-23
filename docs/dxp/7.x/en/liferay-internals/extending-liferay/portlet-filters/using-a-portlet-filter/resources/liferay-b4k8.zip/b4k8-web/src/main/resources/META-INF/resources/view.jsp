@@ -19,7 +19,7 @@
 			<li>
 				<div>
 					<p><c:out value="${member.name}" /></p>
-					<p><c:out value="${member.email}" /></p>
+					<p><c:out value="${member.emailAddress}" /></p>
 				</div>
 			</li>
 		</c:forEach>
