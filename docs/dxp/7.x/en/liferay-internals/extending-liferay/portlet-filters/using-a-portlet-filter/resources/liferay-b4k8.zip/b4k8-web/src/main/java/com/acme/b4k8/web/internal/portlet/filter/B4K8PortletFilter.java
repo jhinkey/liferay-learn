@@ -2,7 +2,7 @@ package com.acme.b4k8.web.internal.portlet.filter;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
 import com.acme.b4k8.model.Person;
-import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
+import com.acme.b4k8.web.internal.constants.B4K8WebKeys;
 
 import java.io.IOException;
 
@@ -40,10 +40,10 @@ public class B4K8PortletFilter implements RenderFilter {
 		throws IOException, PortletException {
 
 		Optional.ofNullable(
-			(List<Person>)renderRequest.getAttribute(B4K8WebConstants.MEMBERS)
+			(List<Person>)renderRequest.getAttribute(B4K8WebKeys.MEMBERS)
 		).ifPresent(
 			persons -> renderRequest.setAttribute(
-				B4K8WebConstants.MEMBERS, _obfuscateEmailAddresses(persons))
+				B4K8WebKeys.MEMBERS, _obfuscateEmailAddresses(persons))
 		);
 
 		filterChain.doFilter(renderRequest, renderResponse);
