@@ -2,7 +2,7 @@ package com.acme.b4k8.web.internal.portlet;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
 import com.acme.b4k8.model.Person;
-import com.acme.b4k8.web.internal.constants.B4K8WebConstants;
+import com.acme.b4k8.web.internal.constants.B4K8WebKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
@@ -30,7 +30,7 @@ public class B4K8Portlet extends MVCPortlet {
 	public void loadMembers(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		actionRequest.setAttribute(B4K8WebConstants.MEMBERS, _persons);
+		actionRequest.setAttribute(B4K8WebKeys.MEMBERS, _persons);
 	}
 
 	private final List<Person> _persons = Arrays.asList(

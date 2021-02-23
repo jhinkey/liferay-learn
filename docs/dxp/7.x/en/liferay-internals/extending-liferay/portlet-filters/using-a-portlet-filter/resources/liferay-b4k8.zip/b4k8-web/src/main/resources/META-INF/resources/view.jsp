@@ -2,7 +2,7 @@
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
-<%@ page import="com.acme.b4k8.web.internal.constants.B4K8WebConstants" %>
+<%@ page import="com.acme.b4k8.web.internal.constants.B4K8WebKeys" %>
 
 <portlet:defineObjects />
 
@@ -12,10 +12,10 @@
 <h1>B4K8 Portlet</h1>
 
 <ul>
-	<c:if test="<%= renderRequest.getAttribute(B4K8WebConstants.MEMBERS) != null %>">
+	<c:if test="<%= renderRequest.getAttribute(B4K8WebKeys.MEMBERS) != null %>">
 		<h4>Here are the team members!</h4>
 
-		<c:forEach items="<%= renderRequest.getAttribute(B4K8WebConstants.MEMBERS) %>" var="member">
+		<c:forEach items="<%= renderRequest.getAttribute(B4K8WebKeys.MEMBERS) %>" var="member">
 			<li>
 				<div>
 					<p><c:out value="${member.name}" /></p>
