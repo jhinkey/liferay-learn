@@ -41,8 +41,8 @@ public class B4K8PortletFilter implements RenderFilter {
 		Optional.ofNullable(
 			(List<Person>)request.getAttribute(B4K8WebConstants.MEMBERS)
 		).ifPresent(
-			personList -> request.setAttribute(
-				B4K8WebConstants.MEMBERS, _obfuscateEmails(personList))
+			persons -> request.setAttribute(
+				B4K8WebConstants.MEMBERS, _obfuscateEmails(persons))
 		);
 
 		chain.doFilter(request, response);
@@ -52,8 +52,8 @@ public class B4K8PortletFilter implements RenderFilter {
 	public void init(FilterConfig filterConfig) throws PortletException {
 	}
 
-	private List<Person> _obfuscateEmails(List<Person> list) {
-		return list.stream(
+	private List<Person> _obfuscateEmails(List<Person> persons) {
+		return persons.stream(
 		).map(
 			this::_obfuscatePersonEmail
 		).collect(
