@@ -1,17 +1,19 @@
 package com.acme.b4k8.web.internal.portlet;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
-import com.acme.b4k8.model.Person;
+import com.acme.b4k8.model.Member;
 import com.acme.b4k8.web.internal.constants.B4K8WebKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -27,17 +29,30 @@ import org.osgi.service.component.annotations.Component;
 )
 public class B4K8Portlet extends MVCPortlet {
 
-	public void loadPersons(
-		ActionRequest actionRequest, ActionResponse actionResponse) {
+	@Override
+	public void render(
+		RenderRequest renderRequest, RenderResponse renderResponse) throws PortletException, IOException {
 
-		actionRequest.setAttribute(B4K8WebKeys.PERSONS, _persons);
+		List<Member> members = (List<Member>)renderRequest.getAttribute(B4K8WebKeys.MEMBERS);
+
+		if (members == null) {
+			System.out.println("B4K8Portlet.render members is null");
+			renderRequest.setAttribute(B4K8WebKeys.MEMBERS, _members);
+		}
+		else {
+			System.out.println("B4K8Portlet.render members is NOT null");
+		}
+
+		super.render(renderRequest, renderResponse);
+
+		System.out.println("B4K8Portlet.super.render");
 	}
 
-	private final List<Person> _persons = Arrays.asList(
-		new Person("ericka.merav@example.dev", "Ericka Merav"),
-		new Person("kennet.brandr@example.com", "Kennet Brandr"),
-		new Person("nikola.septima@example.com", "Nikola Septima"),
-		new Person("sievert.shayne@example.org", "Sievert Shayne"),
-		new Person("vida.jonas@example.net", "Vida Jonas"));
+	private final List<Member> _members = Arrays.asList(
+		new Member("ericka.merav@example.dev", "Ericka Merav"),
+		new Member("kennet.brandr@example.com", "Kennet Brandr"),
+		new Member("nikola.septima@example.com", "Nikola Septima"),
+		new Member("sievert.shayne@example.org", "Sievert Shayne"),
+		new Member("vida.jonas@example.net", "Vida Jonas"));
 
 }
