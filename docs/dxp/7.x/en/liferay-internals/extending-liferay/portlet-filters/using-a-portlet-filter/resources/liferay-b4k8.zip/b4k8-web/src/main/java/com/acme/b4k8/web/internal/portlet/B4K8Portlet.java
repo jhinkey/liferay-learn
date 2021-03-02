@@ -1,7 +1,7 @@
 package com.acme.b4k8.web.internal.portlet;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
-import com.acme.b4k8.model.Person;
+import com.acme.b4k8.model.Member;
 import com.acme.b4k8.web.internal.constants.B4K8WebKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -27,17 +27,17 @@ import org.osgi.service.component.annotations.Component;
 )
 public class B4K8Portlet extends MVCPortlet {
 
-	public void loadPersons(
+	public void loadMembers(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		actionRequest.setAttribute(B4K8WebKeys.PERSONS, _persons);
+		actionRequest.setAttribute(B4K8WebKeys.MEMBERS, _members);
 	}
 
-	private final List<Person> _persons = Arrays.asList(
-		new Person("ericka.merav@example.dev", "Ericka Merav"),
-		new Person("kennet.brandr@example.com", "Kennet Brandr"),
-		new Person("nikola.septima@example.com", "Nikola Septima"),
-		new Person("sievert.shayne@example.org", "Sievert Shayne"),
-		new Person("vida.jonas@example.net", "Vida Jonas"));
+	private final List<Member> _members = Arrays.asList(
+		new Member("ericka.merav@example.dev", "Ericka Merav"),
+		new Member("kennet.brandr@example.com", "Kennet Brandr"),
+		new Member("nikola.septima@example.com", "Nikola Septima"),
+		new Member("sievert.shayne@example.org", "Sievert Shayne"),
+		new Member("vida.jonas@example.net", "Vida Jonas"));
 
 }

@@ -1,7 +1,7 @@
 package com.acme.b4k8.web.internal.portlet.filter;
 
 import com.acme.b4k8.constants.B4K8PortletKeys;
-import com.acme.b4k8.model.Person;
+import com.acme.b4k8.model.Member;
 import com.acme.b4k8.web.internal.constants.B4K8WebKeys;
 
 import java.io.IOException;
@@ -40,10 +40,10 @@ public class B4K8PortletFilter implements RenderFilter {
 		throws IOException, PortletException {
 
 		Optional.ofNullable(
-			(List<Person>)renderRequest.getAttribute(B4K8WebKeys.PERSONS)
+			(List<Member>)renderRequest.getAttribute(B4K8WebKeys.MEMBERS)
 		).ifPresent(
-			persons -> renderRequest.setAttribute(
-				B4K8WebKeys.PERSONS, _obfuscateEmailAddresses(persons))
+			members -> renderRequest.setAttribute(
+				B4K8WebKeys.MEMBERS, _obfuscateEmailAddresses(members))
 		);
 
 		filterChain.doFilter(renderRequest, renderResponse);
@@ -53,20 +53,20 @@ public class B4K8PortletFilter implements RenderFilter {
 	public void init(FilterConfig filterConfig) throws PortletException {
 	}
 
-	private List<Person> _obfuscateEmailAddresses(List<Person> persons) {
-		List<Person> newPersons = new ArrayList<>();
+	private List<Member> _obfuscateEmailAddresses(List<Member> members) {
+		List<Member> newMembers = new ArrayList<>();
 
-		for (Person person : persons) {
-			String emailAddress = person.getEmailAddress();
+		for (Member member : members) {
+			String emailAddress = member.getEmailAddress();
 
-			Person newPerson = new Person(
+			Member newMember = new Member(
 				emailAddress.replaceFirst("(.+)(...)@(...)(.*)", "$1...@...$4"),
-				person.getName());
+				member.getName());
 
-			newPersons.add(newPerson);
+			newMembers.add(newMember);
 		}
 
-		return newPersons;
+		return newMembers;
 	}
 
 }

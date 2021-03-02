@@ -1,8 +1,8 @@
 package com.acme.b4k8.model;
 
-public class Person {
+public class Member {
 
-	public Person(String emailAddress, String name) {
+	public Member(String emailAddress, String name) {
 		_emailAddress = emailAddress;
 		_name = name;
 	}
