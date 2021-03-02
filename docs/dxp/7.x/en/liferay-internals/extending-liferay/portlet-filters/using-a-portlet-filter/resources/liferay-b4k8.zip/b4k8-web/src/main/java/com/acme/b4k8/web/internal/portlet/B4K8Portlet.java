@@ -27,10 +27,10 @@ import org.osgi.service.component.annotations.Component;
 )
 public class B4K8Portlet extends MVCPortlet {
 
-	public void loadMembers(
+	public void loadPersons(
 		ActionRequest actionRequest, ActionResponse actionResponse) {
 
-		actionRequest.setAttribute(B4K8WebKeys.MEMBERS, _persons);
+		actionRequest.setAttribute(B4K8WebKeys.PERSONS, _persons);
 	}
 
 	private final List<Person> _persons = Arrays.asList(

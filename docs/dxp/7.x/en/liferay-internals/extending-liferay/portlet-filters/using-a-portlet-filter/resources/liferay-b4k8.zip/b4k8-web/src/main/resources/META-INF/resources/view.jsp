@@ -6,24 +6,24 @@
 
 <portlet:defineObjects />
 
-<portlet:actionURL name="loadMembers" var="loadMembersURL">
+<portlet:actionURL name="loadPersons" var="loadPersonsURL">
 </portlet:actionURL>
 
 <h1>B4K8 Portlet</h1>
 
 <ul>
-	<c:if test="<%= renderRequest.getAttribute(B4K8WebKeys.MEMBERS) != null %>">
-		<h4>Here are the team members!</h4>
+	<c:if test="<%= renderRequest.getAttribute(B4K8WebKeys.PERSONS) != null %>">
+		<h4>Here are the team persons!</h4>
 
-		<c:forEach items="<%= renderRequest.getAttribute(B4K8WebKeys.MEMBERS) %>" var="member">
+		<c:forEach items="<%= renderRequest.getAttribute(B4K8WebKeys.PERSONS) %>" var="person">
 			<li>
 				<div>
-					<p><c:out value="${member.name}" /></p>
-					<p><c:out value="${member.emailAddress}" /></p>
+					<p><c:out value="${person.name}" /></p>
+					<p><c:out value="${person.emailAddress}" /></p>
 				</div>
 			</li>
 		</c:forEach>
 	</c:if>
 </ul>
 
-<a href="<%= loadMembersURL %>">Load Members</a>
+<a href="<%= loadPersonsURL %>">Load Persons</a>

@@ -40,10 +40,10 @@ public class B4K8PortletFilter implements RenderFilter {
 		throws IOException, PortletException {
 
 		Optional.ofNullable(
-			(List<Person>)renderRequest.getAttribute(B4K8WebKeys.MEMBERS)
+			(List<Person>)renderRequest.getAttribute(B4K8WebKeys.PERSONS)
 		).ifPresent(
 			persons -> renderRequest.setAttribute(
-				B4K8WebKeys.MEMBERS, _obfuscateEmailAddresses(persons))
+				B4K8WebKeys.PERSONS, _obfuscateEmailAddresses(persons))
 		);
 
 		filterChain.doFilter(renderRequest, renderResponse);
