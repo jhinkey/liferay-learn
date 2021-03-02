@@ -60,8 +60,7 @@ public class B4K8PortletFilter implements RenderFilter {
 			String emailAddress = person.getEmailAddress();
 
 			Person newPerson = new Person(
-				emailAddress.replaceFirst(
-					"(.+)(...)@(...)(.*)", "$1...@...$4"),
+				emailAddress.replaceFirst("(.+)(...)@(...)(.*)", "$1...@...$4"),
 				person.getName());
 
 			newPersons.add(newPerson);
