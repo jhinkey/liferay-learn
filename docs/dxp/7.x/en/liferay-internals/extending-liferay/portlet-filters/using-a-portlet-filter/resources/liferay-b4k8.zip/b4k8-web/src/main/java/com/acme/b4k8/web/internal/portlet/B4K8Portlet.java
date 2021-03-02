@@ -34,10 +34,10 @@ public class B4K8Portlet extends MVCPortlet {
 	}
 
 	private final List<Person> _persons = Arrays.asList(
-		new Person("sievert.shayne@example.org", "Sievert Shayne"),
-		new Person("vida.jonas@example.net", "Vida Jonas"),
-		new Person("nikola.septima@example.com", "Nikola Septima"),
 		new Person("ericka.merav@example.dev", "Ericka Merav"),
-		new Person("kennet.brandr@example.com", "Kennet Brandr"));
+		new Person("kennet.brandr@example.com", "Kennet Brandr"),
+		new Person("nikola.septima@example.com", "Nikola Septima"),
+		new Person("sievert.shayne@example.org", "Sievert Shayne"),
+		new Person("vida.jonas@example.net", "Vida Jonas"));
 
 }
