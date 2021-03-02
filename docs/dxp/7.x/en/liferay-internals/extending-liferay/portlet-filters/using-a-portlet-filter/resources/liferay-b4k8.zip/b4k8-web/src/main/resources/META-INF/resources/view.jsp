@@ -8,8 +8,6 @@
 
 <ul>
 	<c:if test="<%= renderRequest.getAttribute(B4K8WebKeys.PERSONS) != null %>">
-		<h4>Here are the team persons!</h4>
-
 		<c:forEach items="<%= renderRequest.getAttribute(B4K8WebKeys.PERSONS) %>" var="person">
 			<li>
 				<div>
