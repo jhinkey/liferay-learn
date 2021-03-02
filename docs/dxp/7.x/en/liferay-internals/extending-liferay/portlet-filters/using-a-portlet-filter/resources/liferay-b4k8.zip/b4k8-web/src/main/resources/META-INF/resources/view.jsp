@@ -6,9 +6,6 @@
 
 <portlet:defineObjects />
 
-<portlet:actionURL name="loadPersons" var="loadPersonsURL">
-</portlet:actionURL>
-
 <h1>B4K8 Portlet</h1>
 
 <ul>
@@ -26,4 +23,4 @@
 	</c:if>
 </ul>
 
-<a href="<%= loadPersonsURL %>">Load Persons</a>
+<a href="<portlet:actionURL name="loadPersons" />">Load Persons</a>
