@@ -40,7 +40,7 @@ function main {
 		## Add document to site
 		##
 
-		curl -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/20121/documents"  -u 'test@liferay.com:test' -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -H  "x-csrf-token: y2i1K2Jo"  -F "file=@./resources/${title}"
+		curl -X POST "http://localhost:8080/o/headless-delivery/v1.0/sites/${site}/documents"  -u 'test@liferay.com:test' -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -H  "x-csrf-token: y2i1K2Jo"  -F "file=@./resources/${title}"
 
 		##
 		## Get the document's id
