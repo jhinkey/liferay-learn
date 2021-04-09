@@ -195,7 +195,11 @@ public class Document_POST_ToSite {
 }
 ```
 
-This class invokes a service using only three lines of code. First, it gets a `DocumentResource.Builder`. Then it uses the `DocumentResource.Builder` to authenticate a user with a `DocumentResource` instance. Lastly, it calls the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object for the uploaded, and a hash map that specifies the file to upload. The file is arbitrary--this example uses local file `Document_POST_ToSite.java` for convenience.
+This class invokes a service using only three lines of code that do these things:
+
+1. Get a `DocumentResource.Builder`.
+1. Use the `DocumentResource.Builder` to authenticate a user with a `DocumentResource` instance.
+1. Call the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object for the uploaded, and a hash map that specifies the file to upload. The file is arbitrary--this example uses local file `Document_POST_ToSite.java` for convenience.
 
 ```note::
 The ``main`` method's comment demonstrates running the class.
@@ -310,7 +314,7 @@ public class Document_GET_ById {
 
 The documents fields are listed in JSON.
 
-## Updating a Document and its Fields
+## Updating a Document
 
 Document's PATCH services update a document and its fields. You can update a document by executing the following curl or Java command. Replace the command's `${1}` or `documentId` with the document's ID.
 
@@ -377,7 +381,7 @@ The above commands update the document's description to "Bar".
 
 ![The curl command changed the document's description.](./document-api-basics/images/03.png)
 
-## Replacing a Document and its Fields
+## Replacing a Document
 
 Document's PUT services replace the document and its fields entirely. You can replace a document by executing the following curl or Java command. Set the command's `${1}` or `documentId` to your document's ID.
 
@@ -505,6 +509,19 @@ The following curl commands and Java classes demonstrate more document services 
 | `Document_POST_ToDocumentFolder.[sh\|java]` | Posts a document to the folder. |
 | `DocumentFolder_PATCH_ById.[sh\|java]` | Updates a folder and its fields. |
 | `DocumentFolder_PUT_ById.[sh\|java]` | Replaces a folder and its fields entirely. |
+
+Liferay's API Explorer lists all of the headless services and schemas, and provides an interface to try out each one.
+
+1. Open your browser to `http://localhost:8080/o/api`.
+1. From *REST Applications*, select *headless-delivery/v1.0*.
+
+The Headless Delivery REST services appear.
+
+To see the API for Document or DocumentFolder, click the row with its name. To try an action (e.g., GET, PATCH, POST, PUT, DELETE) on an endpoint, click its row and click *Try it out*.
+
+To view the schema for Document or DocumentFolder, click *Schemas* at the bottom of the page (near the WikiPage API) and click Document or DocumentFolder to view its schema.
+
+For Javadoc, see [DocumentResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentResource.html)  and [DocumentFolderResource](https://docs.liferay.com/dxp/apps/headless/latest/javadocs/com/liferay/headless/delivery/resource/v1_0/DocumentFolderResource.html).
 
 ## Additional Information
 
