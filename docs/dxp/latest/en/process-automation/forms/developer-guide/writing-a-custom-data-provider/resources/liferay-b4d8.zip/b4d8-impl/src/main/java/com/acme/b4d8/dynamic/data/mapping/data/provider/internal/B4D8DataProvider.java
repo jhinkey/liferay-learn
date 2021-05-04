@@ -49,7 +49,31 @@ public class B4D8DataProvider implements DDMDataProvider {
 		throws DDMDataProviderException {
 
 		try {
-			return doGetData(ddmDataProviderRequest);
+			Optional<DDMDataProviderInstance> ddmDataProviderInstance =
+				fetchDDMDataProviderInstance(
+					ddmDataProviderRequest.getDDMDataProviderId());
+
+			B4D8DataProviderSettings b4d8DataProviderSettings =
+				ddmDataProviderInstanceSettings.getSettings(
+					ddmDataProviderInstance.get(),
+					B4D8DataProviderSettings.class);
+
+			HttpRequest httpRequest = HttpRequest.get(
+				"https://api.geodatasource.com/cities?" +
+					"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
+						"&format=xml&lat=37.3861&lng=-122.084");
+
+			httpRequest.trustAllCerts(true);
+
+			HttpResponse httpResponse = httpRequest.send();
+
+			httpResponse.charset("UTF-8");
+
+			Document document = _convertXMLStringToDocument(
+				httpResponse.bodyText());
+
+			return createDDMDataProviderResponse(
+				b4d8DataProviderSettings, document);
 		}
 		catch (Exception exception) {
 			throw new DDMDataProviderException(exception);
@@ -112,36 +136,6 @@ public class B4D8DataProvider implements DDMDataProvider {
 		return builder.build();
 	}
 
-	protected DDMDataProviderResponse doGetData(
-			DDMDataProviderRequest ddmDataProviderRequest)
-		throws Exception {
-
-		Optional<DDMDataProviderInstance> ddmDataProviderInstance =
-			fetchDDMDataProviderInstance(
-				ddmDataProviderRequest.getDDMDataProviderId());
-
-		B4D8DataProviderSettings b4d8DataProviderSettings =
-			ddmDataProviderInstanceSettings.getSettings(
-				ddmDataProviderInstance.get(), B4D8DataProviderSettings.class);
-
-		HttpRequest httpRequest = HttpRequest.get(
-			"https://api.geodatasource.com/cities?" +
-				"key=LAOOBDZVQ5Z9HHYC4OCXHTGZGQLENMNA" +
-					"&format=xml&lat=37.3861&lng=-122.084");
-
-		httpRequest.trustAllCerts(true);
-
-		HttpResponse httpResponse = httpRequest.send();
-
-		httpResponse.charset("UTF-8");
-
-		Document document = _convertXMLStringToDocument(
-			httpResponse.bodyText());
-
-		return createDDMDataProviderResponse(
-			b4d8DataProviderSettings, document);
-	}
-
 	protected Optional<DDMDataProviderInstance> fetchDDMDataProviderInstance(
 			String ddmDataProviderInstanceId)
 		throws Exception {
@@ -170,17 +164,14 @@ public class B4D8DataProvider implements DDMDataProvider {
 	@Reference(target = "(ddm.data.provider.type=b4d8)")
 	protected DDMDataProviderSettingsProvider ddmDataProviderSettingsProvider;
 
-	private Document _convertXMLStringToDocument(String xml)
-		throws Exception {
-
+	private Document _convertXMLStringToDocument(String xml) throws Exception {
 		DocumentBuilderFactory documentBuilderFactory =
 			SecureXMLFactoryProviderUtil.newDocumentBuilderFactory();
 
 		DocumentBuilder documentBuilder =
 			documentBuilderFactory.newDocumentBuilder();
 
-		return documentBuilder.parse(
-			new InputSource(new StringReader(xml)));
+		return documentBuilder.parse(new InputSource(new StringReader(xml)));
 	}
 
 }
