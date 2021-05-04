@@ -170,7 +170,7 @@ public class B4D8DataProvider implements DDMDataProvider {
 	@Reference(target = "(ddm.data.provider.type=b4d8)")
 	protected DDMDataProviderSettingsProvider ddmDataProviderSettingsProvider;
 
-	private Document _convertXMLStringToDocument(String xmlString)
+	private Document _convertXMLStringToDocument(String xml)
 		throws Exception {
 
 		DocumentBuilderFactory documentBuilderFactory =
@@ -180,7 +180,7 @@ public class B4D8DataProvider implements DDMDataProvider {
 			documentBuilderFactory.newDocumentBuilder();
 
 		return documentBuilder.parse(
-			new InputSource(new StringReader(xmlString)));
+			new InputSource(new StringReader(xml)));
 	}
 
 }
