@@ -17,7 +17,7 @@ public class Charlie {
 	protected void activate(BundleContext bundleContext) {
 		Message message = new Message();
 
-		message.put("component", Charlie.class.getName());
+		message.setPayload("Invoke Charlie#activate(BundleContext)");
 
 		_messageBus.sendMessage(
 			AbleDestinationNames.K4M1_COMPONENT_ACTIVATION, message);

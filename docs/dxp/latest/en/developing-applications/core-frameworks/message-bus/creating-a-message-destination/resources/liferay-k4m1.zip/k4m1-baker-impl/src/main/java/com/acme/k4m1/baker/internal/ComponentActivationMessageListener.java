@@ -18,11 +18,10 @@ public class ComponentActivationMessageListener implements MessageListener {
 	@Override
 	public void receive(Message message) {
 		if (_log.isInfoEnabled()) {
-			String component = message.getString("component");
-
 			_log.info(
-				"Received component activation message for " + component +
-					" at destination " + message.getDestinationName());
+				"Received component activation message payload " +
+					(String)message.getPayload() + " at destination " +
+						message.getDestinationName());
 		}
 	}
 
