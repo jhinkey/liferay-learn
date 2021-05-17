@@ -19,9 +19,8 @@ public class ComponentActivationMessageListener implements MessageListener {
 	public void receive(Message message) {
 		if (_log.isInfoEnabled()) {
 			_log.info(
-				"Received component activation message payload " +
-					(String)message.getPayload() + " at destination " +
-						message.getDestinationName());
+				"Received message payload " + (String)message.getPayload() +
+					" at destination " + message.getDestinationName());
 		}
 	}
 
