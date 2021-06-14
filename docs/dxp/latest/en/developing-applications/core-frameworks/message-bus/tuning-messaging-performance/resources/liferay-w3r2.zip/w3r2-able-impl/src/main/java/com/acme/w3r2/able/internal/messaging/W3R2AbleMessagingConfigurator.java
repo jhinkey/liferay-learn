@@ -1,6 +1,5 @@
 package com.acme.w3r2.able.internal.messaging;
 
-import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.messaging.Destination;
@@ -28,6 +27,10 @@ public class W3R2AbleMessagingConfigurator {
 		// destinationConfiguration.setWorkersCoreSize(workersCoreSize);
 		// destinationConfiguration.setWorkersMaxSize(workersMaxSize);
 
+		if (_log.isInfoEnabled()) {
+			_log.info(destinationConfiguration.toString());
+		}
+
 		Destination destination = _destinationFactory.createDestination(
 			destinationConfiguration);
 
@@ -35,21 +38,6 @@ public class W3R2AbleMessagingConfigurator {
 			Destination.class, destination,
 			MapUtil.singletonDictionary(
 				"destination.name", destination.getName()));
-
-		if (_log.isInfoEnabled()) {
-			StringBundler sb = new StringBundler(8);
-
-			sb.append("Destination ");
-			sb.append(destination.getName());
-			sb.append(", max queue size ");
-			sb.append(destinationConfiguration.getMaximumQueueSize());
-			sb.append(", worker core size ");
-			sb.append(destinationConfiguration.getWorkersCoreSize());
-			sb.append(", worker max size ");
-			sb.append(destinationConfiguration.getWorkersMaxSize());
-
-			_log.info(sb.toString());
-		}
 	}
 
 	@Deactivate
