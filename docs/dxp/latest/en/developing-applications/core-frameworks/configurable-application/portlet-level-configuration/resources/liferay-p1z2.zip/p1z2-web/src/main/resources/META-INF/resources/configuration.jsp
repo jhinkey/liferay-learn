@@ -31,9 +31,9 @@ if (p1z2WebPortletInstanceConfiguration != null) {
 	<aui:input name="redirect" type="hidden" value="<%= configurationRenderURL %>" />
 
 	<aui:fieldset>
-		<aui:select label="Portlet Preference" name="configurationSource" value="<%= configurationSource %>">
-			<aui:option value="Portlet Preference 1">Portlet Preference 1</aui:option>
-			<aui:option value="Portlet Preference 2">Portlet Preference 2</aui:option>
+		<aui:select label="portlet-preference" name="configurationSource" value="<%= configurationSource %>">
+			<aui:option label="portlet-preference-1" value="portlet-preference-1" />
+			<aui:option label="portlet-preference-2" value="portlet-preference-2" />
 		</aui:select>
 	</aui:fieldset>
 

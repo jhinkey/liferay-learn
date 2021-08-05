@@ -16,12 +16,12 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 public interface P1Z2WebPortletInstanceConfiguration {
 
 	@Meta.AD(
-		deflt = "Configuration Framework 1", name = "configuration-source",
+		deflt = "configuration-framework-1", name = "configuration-source",
 		optionLabels = {
-			"Configuration Framework 1", "Configuration Framework 2"
+			"configuration-framework-1", "configuration-framework-2"
 		},
 		optionValues = {
-			"Configuration Framework 1", "Configuration Framework 2"
+			"configuration-framework-1", "configuration-framework-2"
 		},
 		required = false
 	)
