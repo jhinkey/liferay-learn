@@ -4,9 +4,8 @@
 taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 
-<%@ page import="com.acme.p1z2.web.internal.configuration.P1Z2WebPortletInstanceConfiguration" %>
-
-<%@ page import="com.liferay.petra.string.StringPool" %><%@
+<%@ page import="com.acme.p1z2.web.internal.configuration.P1Z2WebPortletInstanceConfiguration" %><%@
+page import="com.liferay.petra.string.StringPool" %><%@
 page import="com.liferay.portal.kernel.util.Constants" %>
 
 <liferay-theme:defineObjects />
@@ -38,6 +37,6 @@ if (p1z2WebPortletInstanceConfiguration != null) {
 	</aui:fieldset>
 
 	<aui:button-row>
-		<aui:button type="submit"></aui:button>
+		<aui:button type="submit" />
 	</aui:button-row>
 </aui:form>
