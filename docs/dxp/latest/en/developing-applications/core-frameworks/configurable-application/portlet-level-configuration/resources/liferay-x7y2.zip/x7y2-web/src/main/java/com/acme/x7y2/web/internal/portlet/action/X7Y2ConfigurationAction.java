@@ -23,6 +23,10 @@ public class X7Y2ConfigurationAction extends DefaultConfigurationAction {
 			PortletConfig portletConfig, ActionRequest actionRequest,
 			ActionResponse actionResponse)
 		throws Exception {
+		
+		System.out.println("Calling processAction");
+
+		System.out.println("color " + ParamUtil.getString(actionRequest, "color"));
 
 		setPreference(
 			actionRequest, "color",
