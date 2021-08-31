@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":t2p5-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../t2p5-api/src/main/java"
+}
+
+group = "com.acme.t2p5"
