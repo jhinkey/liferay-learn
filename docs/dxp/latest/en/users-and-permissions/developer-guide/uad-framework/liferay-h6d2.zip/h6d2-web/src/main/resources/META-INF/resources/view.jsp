@@ -7,7 +7,7 @@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
 <%@ page import="com.acme.h6d2.model.Todo" %><%@
-page import="com.acme.h6d2.service.TodoLocalServiceUtil" %>
+page import="com.acme.h6d2.service.TodoLocalService" %>
 
 <%@ page import="java.util.List" %>
 
@@ -20,20 +20,24 @@ page import="com.acme.h6d2.service.TodoLocalServiceUtil" %>
 <portlet:actionURL name="addTodo" var="addTodoURL" />
 
 <p>
+	<h5>New Todo</h5>
+
 	<aui:form action="<%= addTodoURL %>">
-		<aui:input name="item" type="text" />
+		<aui:input name="name" type="text" />
 
 		<aui:button type="submit" value="submit" />
 	</aui:form>
 </p>
 
 <%
-List<Todo> todoList = TodoLocalServiceUtil.getTodos(-1, -1);
+TodoLocalService todoLocalService = (TodoLocalService)request.getAttribute("todoLocalService");
+
+List<Todo> todoList = todoLocalService.getTodos(-1, -1);
 %>
 
 <h5>Todos</h5>
 <c:choose>
-	<c:when test="<%= (todoList != null) && (todoList.size() > 0) %>">
+	<c:when test="<%= (todoList != null) && (todoLocalService.getTodosCount() > 0) %>">
 		<table>
 			<tbody>
 				<c:forEach items="<%= todoList %>" var="todo">

@@ -12,9 +12,14 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import java.io.IOException;
+
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -37,7 +42,7 @@ public class H6D2Portlet extends MVCPortlet {
 		ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(
 			WebKeys.THEME_DISPLAY);
 
-		String item = ParamUtil.getString(actionRequest, "item");
+		String name = ParamUtil.getString(actionRequest, "name");
 
 		User user = _portal.getUser(actionRequest);
 
@@ -50,9 +55,18 @@ public class H6D2Portlet extends MVCPortlet {
 
 		todo.setGroupId(themeDisplay.getSiteGroupId());
 
-		todo.setName(item);
+		todo.setName(name);
 
 		_todoLocalService.addTodo(todo);
+	}
+
+	@Override
+	public void render(RenderRequest request, RenderResponse response)
+		throws IOException, PortletException {
+
+		request.setAttribute("todoLocalService", _todoLocalService);
+
+		super.render(request, response);
 	}
 
 	@Reference
