@@ -30,6 +30,13 @@ public class TodoLocalServiceWrapper
 		_todoLocalService = todoLocalService;
 	}
 
+	@Override
+	public com.acme.f4h9.model.Todo addTodo(String name, String description)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _todoLocalService.addTodo(name, description);
+	}
+
 	/**
 	 * Adds the todo to the database. Also notifies the appropriate model listeners.
 	 *

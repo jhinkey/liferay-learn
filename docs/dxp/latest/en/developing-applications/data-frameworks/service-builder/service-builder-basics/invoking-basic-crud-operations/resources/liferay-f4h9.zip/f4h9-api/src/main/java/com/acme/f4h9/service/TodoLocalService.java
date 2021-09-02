@@ -62,6 +62,7 @@ public interface TodoLocalService
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.acme.f4h9.service.impl.TodoLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the todo local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link TodoLocalServiceUtil} if injection and service tracking are not available.
 	 */
+	public Todo addTodo(String name, String description) throws PortalException;
 
 	/**
 	 * Adds the todo to the database. Also notifies the appropriate model listeners.

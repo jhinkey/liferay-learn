@@ -45,6 +45,11 @@ public class TodoLocalServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.acme.f4h9.service.impl.TodoLocalServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static Todo addTodo(String name, String description)
+		throws PortalException {
+
+		return getService().addTodo(name, description);
+	}
 
 	/**
 	 * Adds the todo to the database. Also notifies the appropriate model listeners.
