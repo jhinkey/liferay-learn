@@ -16,10 +16,7 @@ page import="com.acme.f4h9.service.TodoLocalService" %>
 
 <portlet:actionURL name="addTodo" var="addTodoURL" />
 <portlet:actionURL name="deleteTodo" var="deleteTodoURL" />
-
-<portlet:renderURL var="editTodoURL">
-	<portlet:param name="mvcPath" value="/edit_todo.jsp" />
-</portlet:renderURL>
+<portlet:actionURL name="updateTodo" var="updateTodoURL" />
 
 <hr />
 
@@ -51,8 +48,20 @@ List<Todo> todoList = todoLocalService.getTodos(-1, -1);
 
 <h5>Add Todo</h5>
 <aui:form action="<%= addTodoURL %>">
-	<aui:input label="Name" name="name" type="text" value="" />
-	<aui:input label="Description" name="description" type="text" value="" />
+	<aui:input label="Name" name="name" type="text" />
+	<aui:input label="Description" name="description" type="text" />
+
+	<aui:button type="submit" value="submit" />
+</aui:form>
+
+<hr />
+
+<h4>Edit Todo</h4>
+
+<aui:form action="<%= updateTodoURL %>">
+	<aui:input label="ID" name="todoId" type="text" />
+	<aui:input label="Name" name="name" type="text" />
+	<aui:input label="Description" name="description" type="text" />
 
 	<aui:button type="submit" value="submit" />
 </aui:form>
@@ -61,15 +70,6 @@ List<Todo> todoList = todoLocalService.getTodos(-1, -1);
 
 <h5>Delete Todo</h5>
 <aui:form action="<%= deleteTodoURL %>">
-	<aui:input label="ID" name="todoId" type="text" />
-
-	<aui:button type="submit" value="submit" />
-</aui:form>
-
-<hr />
-
-<h5>Update Todo</h5>
-<aui:form action="<%= editTodoURL %>">
 	<aui:input label="ID" name="todoId" type="text" />
 
 	<aui:button type="submit" value="submit" />
