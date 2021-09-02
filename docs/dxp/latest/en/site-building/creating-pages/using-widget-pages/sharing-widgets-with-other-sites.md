@@ -6,7 +6,7 @@ You can share widgets with other Sites by embedding an instance of a widget runn
 
 1. Click on the widget's *Options* icon (![Options](../../../images/icon-app-options.png)) &rarr; *Configuration* &rarr; *Sharing*. 
 
-1. There are three sub-tabs under sharing: Facebook, OpenSocial Gadget, Netvibes. Proceed according to the context you choose. 
+1. There are three sub-tabs under sharing: Facebook, OpenSocial Gadget and Netvibes. Proceed according to the context you choose. 
 
 ```{note}
 With any website, switch the toggle to allow the navigation. Copy and paste the provided snippet of JavaScript code into the website where you want to add the widget. When a user loads the page on the other website, the code pulls the relevant widget from your Site and displays it. 
@@ -14,8 +14,7 @@ With any website, switch the toggle to allow the navigation. Copy and paste the 
 
 ## Facebook
 
-You can add any widget as a Facebook app. To do this, you must first get a 
-developer key.
+You can add any widget as a Facebook app. To do this, you must first get a developer key.
 
 1. Go to the Facebook tab on Sharing. 
 

@@ -9,12 +9,10 @@ First, select a scope for your widget:
 **Global**: Scoping by Site means that you can only have one Message Boards widget per Site. If you add one Message Boards widget to a page in a Site and add another Message Boards widget to a different page in the same Site, the second Message Boards widget contains exactly the same data as the first. This is because, by default, the Message Boards widget is scoped by Site. Most of @product@'s other widgets also default to being scoped by Site.
 
 **Page**: The data sets of page-scoped widget serve a single page, not an entire Site. If you set the scope of a widget to *page* instead of *Site*, you can add any number of widgets to different pages, and then they have different sets of data. You can have more than one message board per Site if you wish. Most
-widgets, however, default to the "native" configuration, and have their scopes
-set to the Site where they are placed.
+widgets, however, default to the "native" configuration, and have their scopes set to the Site where they are placed.
 
 Unless otherwise noted, all widgets support scoping by instance (global), Site
-(default), or page. This grants you some flexibility in how you want to set up
-your Liferay instance. You can configure the scope of an app with just a few
+(default), or page. This grants you some flexibility in how you want to set up your Liferay instance. You can configure the scope of an app with just a few
 simple steps.
 
 1.  Click on *Options* (![Options](../../../images/icon-app-options.png)) in the app window &rarr; *Configuration* &rarr; *Scope* tab. 
