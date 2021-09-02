@@ -1,0 +1,10 @@
+Bundle-Name: Acme F4H9 API
+Bundle-SymbolicName: com.acme.f4h9.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.f4h9.exception,\
+	com.acme.f4h9.model,\
+	com.acme.f4h9.service,\
+	com.acme.f4h9.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../f4h9-service/service.xml
