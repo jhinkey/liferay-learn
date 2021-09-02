@@ -28,4 +28,16 @@ import org.osgi.service.component.annotations.Component;
 	service = AopService.class
 )
 public class TodoLocalServiceImpl extends TodoLocalServiceBaseImpl {
+
+	public Todo addTodo(String name, String description)
+		throws PortalException {
+
+		Todo todo = createTodo(counterLocalService.increment());
+
+		todo.setName(name);
+		todo.setDescription(description);
+
+		return addTodo(todo);
+	}
+
 }
