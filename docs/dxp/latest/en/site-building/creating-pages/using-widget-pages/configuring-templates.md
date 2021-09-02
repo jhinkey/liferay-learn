@@ -13,7 +13,7 @@ To create a configuration template, do as follows:
 
 1. Click on *Options* (![Options](../../../images/icon-app-options.png)) from the menu in the widget's title bar &rarr; select *Configuration Templates*. 
 
-If widget's current settings are the ones you want to save, click the *Save Current Configuration as Template* button. If not, change the settings until it's configured the way you want it, and then click the button.
+If the widget's current settings are the ones you want to save, click the *Save Current Configuration as Template* button. If not, change the settings until it's configured the way you want it, and then click the button.
 
 ![Create a configuration template to save your app's configuration settings.](./configuring-templates/images/01.png)
 
@@ -28,6 +28,5 @@ as the Message Boards application.
 ## Summary
 
 You've now explored the configuration options available for Liferay widgets.
-You learned how to [customize your widgets](), [export/import data](), [communicate
-between widgets](), [take advantage of different scopes](./setting-widget-scopes.md), and [save configuration
-settings](./configuring-templates.md). You also examined the different [uses of social applications](./sharing-widgets-with-other-sites.md) like Facebook and Netvibes for your Liferay widgets. In all, @product@ gives you an abundance of options to leverage the full capability of your widgets.
+You learned how to [customize your widgets](./look-and-feel-configuration.md), [export/import data](./exporting-importing-widget-data.md), [communicate
+between widgets](./communication-between-widgets.md), [take advantage of different scopes](./setting-widget-scopes.md), and [save configuration settings](./configuring-templates.md). You also examined the different [uses of social applications](./sharing-widgets-with-other-sites.md) like Facebook and Netvibes for your Liferay widgets. In all, @product@ gives you an abundance of options to leverage the full capability of your widgets.
