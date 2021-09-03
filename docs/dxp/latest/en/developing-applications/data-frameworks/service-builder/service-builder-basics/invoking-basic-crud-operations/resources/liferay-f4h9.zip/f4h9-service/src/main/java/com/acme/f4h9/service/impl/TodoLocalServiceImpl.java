@@ -25,4 +25,15 @@ public class TodoLocalServiceImpl extends TodoLocalServiceBaseImpl {
 		return addTodo(todo);
 	}
 
+	public Todo updateTodo(long todoId, String name, String description)
+		throws PortalException {
+
+		Todo todo = getTodo(todoId);
+
+		todo.setName(name);
+		todo.setDescription(description);
+
+		return addTodo(todo);
+	}
+
 }
