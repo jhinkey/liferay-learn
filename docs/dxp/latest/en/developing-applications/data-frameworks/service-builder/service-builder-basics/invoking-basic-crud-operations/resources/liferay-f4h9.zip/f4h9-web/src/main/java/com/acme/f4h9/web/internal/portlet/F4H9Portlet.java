@@ -1,6 +1,5 @@
 package com.acme.f4h9.web.internal.portlet;
 
-import com.acme.f4h9.model.Todo;
 import com.acme.f4h9.service.TodoLocalService;
 
 import com.liferay.portal.kernel.exception.PortalException;
@@ -33,19 +32,17 @@ public class F4H9Portlet extends MVCPortlet {
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
-		String name = ParamUtil.getString(actionRequest, "name");
-		String description = ParamUtil.getString(actionRequest, "description");
-
-		_todoLocalService.addTodo(name, description);
+		_todoLocalService.addTodo(
+			ParamUtil.getString(actionRequest, "name"),
+			ParamUtil.getString(actionRequest, "description"));
 	}
 
 	public void deleteTodo(
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
-		long todoId = ParamUtil.getLong(actionRequest, "todoId");
-
-		_todoLocalService.deleteTodo(todoId);
+		_todoLocalService.deleteTodo(
+			ParamUtil.getLong(actionRequest, "todoId"));
 	}
 
 	@Override
@@ -61,14 +58,10 @@ public class F4H9Portlet extends MVCPortlet {
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
-		long todoId = ParamUtil.getLong(actionRequest, "todoId");
-
-		Todo todo = _todoLocalService.getTodo(todoId);
-
-		todo.setName(ParamUtil.getString(actionRequest, "name"));
-		todo.setDescription(ParamUtil.getString(actionRequest, "description"));
-
-		_todoLocalService.updateTodo(todo);
+		_todoLocalService.updateTodo(
+			ParamUtil.getLong(actionRequest, "todoId"),
+			ParamUtil.getString(actionRequest, "name"),
+			ParamUtil.getString(actionRequest, "description"));
 	}
 
 	@Reference
