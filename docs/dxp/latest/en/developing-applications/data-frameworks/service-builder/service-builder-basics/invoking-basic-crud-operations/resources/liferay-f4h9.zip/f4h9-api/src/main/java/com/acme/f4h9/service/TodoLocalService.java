@@ -254,6 +254,9 @@ public interface TodoLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public int getTodosCount();
 
+	public Todo updateTodo(long todoId, String name, String description)
+		throws PortalException;
+
 	/**
 	 * Updates the todo in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *

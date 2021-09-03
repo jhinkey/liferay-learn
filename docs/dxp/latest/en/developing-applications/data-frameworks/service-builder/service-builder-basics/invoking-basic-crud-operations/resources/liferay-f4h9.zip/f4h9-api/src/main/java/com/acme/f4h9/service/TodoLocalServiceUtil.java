@@ -279,6 +279,12 @@ public class TodoLocalServiceUtil {
 		return getService().getTodosCount();
 	}
 
+	public static Todo updateTodo(long todoId, String name, String description)
+		throws PortalException {
+
+		return getService().updateTodo(todoId, name, description);
+	}
+
 	/**
 	 * Updates the todo in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *

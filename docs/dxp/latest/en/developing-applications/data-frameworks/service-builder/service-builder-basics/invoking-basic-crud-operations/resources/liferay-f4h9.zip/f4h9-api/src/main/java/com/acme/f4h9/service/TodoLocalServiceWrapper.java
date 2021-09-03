@@ -301,6 +301,14 @@ public class TodoLocalServiceWrapper
 		return _todoLocalService.getTodosCount();
 	}
 
+	@Override
+	public com.acme.f4h9.model.Todo updateTodo(
+			long todoId, String name, String description)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _todoLocalService.updateTodo(todoId, name, description);
+	}
+
 	/**
 	 * Updates the todo in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
