@@ -85,13 +85,13 @@ A special property called `include-and-override` defines property override order
     * Extension properties files
     * [Env variables](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
 
-1. The last value defined for a *shared property* (a property defined multiple times) takes priority.
+1. The last property value read takes priority.
 
 1. Property sources are read in a [deterministic order](#configuration-processing).
 
 ### Configuration Processing
 
-Properties are defined in this order:
+Properties are read in this order:
 
 ```properties
 portal-impl.jar/portal.properties
@@ -116,7 +116,7 @@ The `${external-properties}` definition represents any properties file assigned 
 Liferay Docker containers aggregate Liferay environment variables into a Portal Properties source that's added to the list.
 
 ```important::
-   If you override a property in more than one file, the **last** defined property source wins. All others are ignored.
+   If you override a property in more than one source (a properties file or environment variable), the last property definition read wins. All other definitions for the property are ignored.
 ```
 
 ![All of your DXP server's Portal Properties are available to view in the Server Administration page in the Control Panel's Configuration section.](./portal-properties/images/02.png)
