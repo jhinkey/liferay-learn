@@ -25,10 +25,10 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	property = {"osgi.command.function=search", "osgi.command.scope=liferay"},
-	service = QueriesAndFiltersOSGiCommand.class
+	property = {"osgi.command.function=search", "osgi.command.scope=r2d2"},
+	service = R2D2OSGiCommand.class
 )
-public class QueriesAndFiltersOSGiCommand {
+public class R2D2OSGiCommand {
 
 	public void search(String keywords) {
 		MatchQuery titleQuery = _queries.match(

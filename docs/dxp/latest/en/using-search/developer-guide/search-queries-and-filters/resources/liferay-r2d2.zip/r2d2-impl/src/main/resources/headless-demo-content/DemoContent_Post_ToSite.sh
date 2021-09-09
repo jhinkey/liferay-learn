@@ -10,8 +10,8 @@ fi
 
 # Add a root level document
 curl \
-	-F "document={\"description\": \"Baker\", \"title\": \"Able Document\"}" \
-	-F "file=@test.txt" \
+	-F "document={\"description\": \"Baker\", \"title\": \"Able Root Level Document\"}" \
+	-F "file=@DemoContent_Post_ToSite.sh" \
 	-H "Content-Type: multipart/form-data" \
 	-X POST \
 	"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents" \
@@ -30,8 +30,8 @@ read documentFolderId
 
 # Add the Document inside the folder
 curl \
-	-F "document={\"description\": \"Baker\", \"title\": \"Able Document\"}" \
-	-F "file=@test.txt" \
+	-F "document={\"description\": \"Baker\", \"title\": \"Able Document in Folder\"}" \
+	-F "file=@DemoContent_Post_ToSite.sh" \
 	-H "Content-Type: multipart/form-data" \
 	-X POST "http://localhost:8080/o/headless-delivery/v1.0/document-folders/${documentFolderId}/documents" \
 	-u "test@liferay.com:test"
@@ -51,7 +51,7 @@ curl \
 	-H "Content-Type: application/json" \
 	-X POST \
 	"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/structured-contents" \
-	-d "{\"contentFields\": [{\"contentFieldValue\": {\"data\": \"<p>Foo</p>\"}, \"name\": \"content\"}], \"contentStructureId\": \"${contentStructuredId}\", \"title\": \"Able Article\"}" \
+	-d "{\"contentFields\": [{\"contentFieldValue\": {\"data\": \"<p>Foo</p>\"}, \"name\": \"content\"}], \"contentStructureId\": \"${contentStructuredId}\", \"title\": \"Able Root Level Article\"}" \
 	-u "test@liferay.com:test"
 
 # Add a web content folder
@@ -59,7 +59,7 @@ curl \
 	-H "Content-Type: application/json" \
 	-X POST \
 	"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/structured-content-folders" \
-	-d "{\"description\": \"Foo\", \"name\": \"Able Folder\"}" \
+	-d "{\"description\": \"Foo\", \"name\": \"Able Web Content Folder\"}" \
 	-u "test@liferay.com:test"
 
 echo "Enter the ID:"
@@ -70,5 +70,5 @@ curl \
 	-H "Content-Type: application/json" \
 	-X POST \
 	"http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/${structuredContentFolderId}/structured-contents" \
-	-d "{\"contentFields\": [{\"contentFieldValue\": {\"data\": \"<p>Foo</p>\"}, \"name\": \"content\"}], \"contentStructureId\": \"${contentStructuredId}\", \"title\": \"Able Article\"}" \
+	-d "{\"contentFields\": [{\"contentFieldValue\": {\"data\": \"<p>Foo</p>\"}, \"name\": \"content\"}], \"contentStructureId\": \"${contentStructuredId}\", \"title\": \"Able Article in Folder\"}" \
 	-u "test@liferay.com:test"
