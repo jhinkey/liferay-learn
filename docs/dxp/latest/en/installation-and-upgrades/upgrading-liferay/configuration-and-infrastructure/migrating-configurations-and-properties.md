@@ -7,6 +7,7 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
 * [Migrating Liferay Home](#migrating-liferay-home)
 * [Updating Settings for the Database Upgrade](#updating-settings-used-by-the-database-upgrade)
 * [Migrating Portal Properties](#migrating-portal-properties)
+* [Migrating Configuration Files](#migrating-configuration-files)
 
 ## Migrating Liferay Home and Application Server Files
 
@@ -140,6 +141,38 @@ There are resources for migrating properties related to specific environments, L
    ```note::
       You can build image sprites using any framework you like and deploy them in your plugins.
    ```
+
+## Migrating Configuration Files
+
+If you're upgrading from 7.3 or earlier, rename your [factory configuration files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md) to use a tilde (`~`) instead of a dash (`-`) as the separator between the name and subname.
+
+### Example: Renaming a Default Configuration
+
+Old:
+
+```bash
+com.acme.foo.BarConfiguration-default.config
+```
+
+New:
+
+```bash
+com.acme.foo.BarConfiguration~default.config
+```
+
+### Example: Renaming a Non-Default Configuration
+
+Old:
+
+```bash
+com.acme.foo.BarConfiguration-sub-name.config
+```
+
+New:
+
+```bash
+com.acme.foo.BarConfiguration~sub-name.config
+```
 
 ## Next Steps
 
