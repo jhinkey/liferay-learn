@@ -20,7 +20,7 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
 1. Start the Liferay DXP Docker image:
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_GENERAL_DXP_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_GENERAL_DOCKER_IMAGE$]
     ```
 
    ```{note}
