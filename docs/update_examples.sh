@@ -24,7 +24,7 @@ function copy_template {
 			then
 				echo -ne "liferay.workspace.product=${LIFERAY_LEARN_DXP_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
 			else
-				echo -ne "liferay.workspace.product=${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
+				echo -ne "liferay.workspace.product=${LIFERAY_LEARN_DEVELOPMENT_PORTAL_WORKSPACE_TOKEN}" > ${zip_dir_name}/gradle.properties
 			fi
 
 			pushd ${zip_dir_name}

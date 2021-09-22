@@ -147,19 +147,18 @@ function generate_sphinx_input {
 		sed -i "s/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
 		sed -i "s/${LIFERAY_LEARN_COMMERCE_GIT_TAG_TOKEN}/${LIFERAY_LEARN_COMMERCE_GIT_TAG_VALUE}/g" "${md_file_name}"
 		sed -i "s/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_DXP_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
-		sed -i "s/${LIFERAY_LEARN_GENERAL_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_GENERAL_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
 		sed -i "s/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_TOKEN}/${LIFERAY_LEARN_PORTAL_DOCKER_IMAGE_VALUE}/g" "${md_file_name}"
 		sed -i "s/${LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN}/${LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE}/g" "${md_file_name}"
 	done
 
 	for gradle_build_file_name in $(find build/input -name "build.gradle" -type f)
 	do
-		sed -i "s/release.portal.api/${LIFERAY_LEARN_GENERAL_API_TOKEN}/g" "${gradle_build_file_name}"
+		sed -i "s/release.portal.api/${LIFERAY_LEARN_PORTAL_API_TOKEN}/g" "${gradle_build_file_name}"
 	done
 
 	for gradle_properties_file_name in $(find build/input -name "gradle.properties" -type f)
 	do
-		sed -i "s/${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}/${LIFERAY_LEARN_GENERAL_WORKSPACE_TOKEN}/g" "${gradle_properties_file_name}"
+		sed -i "s/${LIFERAY_LEARN_DEVELOPMENT_PORTAL_WORKSPACE_TOKEN}/${LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN}/g" "${gradle_properties_file_name}"
 	done
 }
 
