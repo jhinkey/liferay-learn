@@ -6,28 +6,28 @@ curl \
 	--data-binary @- << EOF
 		{
 			"contentFields" : [ {
-			  "contentFieldValue" : {
-			  "data" : "Goo"
-			  },
-			  "name" : "TextReference"
+				"contentFieldValue" : {
+					"data" : "Goo"
+				},
+				"name" : "TextReference"
 			}, {
-			  "contentFieldValue" : {
-				"image" : {
-					"description" : "Goo alt-image description",
-					"id" : "${3}"
-				}
-			},
-			"name" : "ImageReference"
+				"contentFieldValue" : {
+					"image" : {
+						"description" : "Goo alt-image description",
+						"id" : "${3}"
+					}
+				},
+				"name" : "ImageReference"
 			}, {
-			"contentFieldValue" : {
-				"data" : "2021-10-30T00:00:00Z"
-			},
-			"name" : "DateReference"
+				"contentFieldValue" : {
+					"data" : "2021-10-30T00:00:00Z"
+				},
+				"name" : "DateReference"
 			}, {
-			"contentFieldValue" : {
-				"data" : "Goo"
-			},
-			"name" : "SingleSelectionReference"
+				"contentFieldValue" : {
+					"data" : "Goo"
+				},
+				"name" : "SingleSelectionReference"
 			} ],
 			"contentStructureId" : "${2}",
 			"title" : "Baker Article"
