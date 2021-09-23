@@ -154,7 +154,7 @@ function generate_sphinx_input {
 
 	for gradle_build_file_name in $(find build/input -name "build.gradle" -type f)
 	do
-		sed -i "s/release.portal.api/${LIFERAY_LEARN_GENERAL_API_TOKEN}/g" "${gradle_build_file_name}"
+		sed -i "s/${LIFERAY_LEARN_PORTAL_API_TOKEN}/${LIFERAY_LEARN_GENERAL_API_TOKEN}/g" "${gradle_build_file_name}"
 	done
 
 	for gradle_properties_file_name in $(find build/input -name "gradle.properties" -type f)
