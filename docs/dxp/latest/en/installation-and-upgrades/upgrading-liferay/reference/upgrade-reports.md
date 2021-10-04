@@ -1,4 +1,4 @@
-# Reporting Upgrade Details
+# Upgrade Reports
 
 When you upgrade your data, it's important to know the changes made and any issues that occurred. The [Database Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)'s built-in reporting capability captures this information. Reports include these details:
 
