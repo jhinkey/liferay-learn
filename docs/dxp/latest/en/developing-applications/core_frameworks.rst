@@ -12,6 +12,7 @@ Core Frameworks
    core-frameworks/template-engine.md
    core-frameworks/configuration-framework.md
    core-frameworks/dependency-injection.md
+   core-frameworks/portlet-providers.md
    core-frameworks/reference.rst
 
 .. raw:: html
