@@ -13,6 +13,7 @@ Core Frameworks
    core-frameworks/configuration-framework.md
    core-frameworks/dependency-injection.md
    core-frameworks/portlet-providers.md
+   core-frameworks/servlets.md
    core-frameworks/reference.rst
 
 .. raw:: html
