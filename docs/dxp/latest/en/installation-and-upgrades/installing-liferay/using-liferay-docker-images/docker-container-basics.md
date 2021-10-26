@@ -102,3 +102,4 @@ If you want to know what the container entry point does and learn the container'
 * [Patching DXP in Docker](./patching-dxp-in-docker.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [Upgrading to a New Docker Image](./upgrading-to-a-new-docker-image.md)
+* [Docker Image Versions](./docker-image-versions.md)

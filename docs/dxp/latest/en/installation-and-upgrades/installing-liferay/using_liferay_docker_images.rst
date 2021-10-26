@@ -13,6 +13,7 @@ Using Liferay Docker Images
    using-liferay-docker-images/running-scripts-in-containers.md
    using-liferay-docker-images/providing-files-to-the-container.md
    using-liferay-docker-images/upgrading-to-a-new-docker-image.md
+   using-liferay-docker-images/docker-image-versions.md
 
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api`
@@ -23,3 +24,4 @@ Using Liferay Docker Images
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/running-scripts-in-containers`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container`
 - :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-image-versions`

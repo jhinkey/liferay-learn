@@ -15,3 +15,7 @@ Upgrading involves updating configurations, Marketplace applications, and custom
 ## What's Next
 
 Start by reading the [Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md). Then if you are interested in using auto-upgrade in the new container, see [Upgrading via Docker](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md). If your environment calls for using the Database Upgrade Tool, see [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md).
+
+## Additional Information 
+
+* [Docker Image Versions](./docker-image-versions.md)
