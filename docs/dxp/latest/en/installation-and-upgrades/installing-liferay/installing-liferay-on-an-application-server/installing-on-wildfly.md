@@ -1,6 +1,6 @@
 # Installing on WildFly
 
-Installing on WildFly requires installing the DXP WAR, installing dependencies, configuring WebSphere, and deploying DXP on WildFly. You must also configure your database and mail server connections.
+Installing on WildFly requires installing the DXP WAR, installing dependencies, configuring WildFly, and deploying DXP on WildFly. You must also configure your database and mail server connections.
 
 ## Prerequisites
 
