@@ -82,5 +82,12 @@
 	"dxp/latest/ja/liferay-internals/fundamentals/using-felix-gogo-shell.html" : "dxp/latest/ja/liferay-internals/fundamentals/using-the-gogo-shell.html",
 	"dxp/latest/en/developing-applications/data_frameworks.html" : "dxp/latest/en/developing-applications/data-frameworks.html",
 	"dxp/latest/ja/developing-applications/data_frameworks.html" : "dxp/latest/ja/developing-applications/data-frameworks.html",
-	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
+	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html",
+	"dxp/latest/en/system-administration/file_storage.html" : "dxp/latest/en/system-administration/file-storage.html",
+	"dxp/latest/en/system-administration/file-storage/other_file_store_types.html" : "dxp/latest/en/system-administration/file-storage/other-file-store-types.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/installing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/managing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/managing-apps.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/getting_started.html" : "dxp/latest/en/system-administration/installing-and-managing-apps.html",
+	"dxp/latest/en/system-administration/using-the-script-engine/using-the-script-engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html",
+	"dxp/latest/en/system-administration/using_the_script_engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html"
 }
