@@ -13,6 +13,7 @@
 	"dxp/latest/en/developing-applications/core_frameworks.html" : "dxp/latest/en/developing-applications/core-frameworks.html",
 	"dxp/latest/en/developing-applications/core-frameworks/dispatch_framework.html" : "dxp/latest/en/developing-applications/core-frameworks/dispatch-framework.html",
 	"dxp/latest/en/developing-applications/core-frameworks/message-bus/message-bus.md" : "dxp/latest/en/developing-applications/core-frameworks/message-bus.md",
+	"dxp/latest/en/developing-applications/data_frameworks.html" : "dxp/latest/en/developing-applications/data-frameworks.html",
 	"dxp/latest/en/developing-applications/developing_a_java_web_application.html" : "dxp/latest/en/developing-applications/developing-a-java-web-application.html",
 	"dxp/latest/en/developing-applications/developing-a-java-web-application/portlets.html" : "dxp/latest/en/developing-applications/developing-a-java-web-application/reference/portlets.html",
 	"dxp/latest/en/developing-applications/developing_a_javascript_application.html" : "dxp/latest/en/developing-applications/developing-a-javascript-application.html",
@@ -32,6 +33,8 @@
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/running-scripts-in-containers.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/running-scripts-in-containers.html",
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.html",
 	"dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/en/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
+	"dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining_clustered_installations.html" : "dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations.html",
+	"dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html" : "dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations.html",
 	"dxp/latest/en/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html",
 	"dxp/latest/en/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay.html",
 	"dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering_for_high_availability.html" : "dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
@@ -47,6 +50,7 @@
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
 	"dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html": "dxp/latest/en/users-and-permissions/users/adding-custom-fields-to-users.html",
 	"dxp/latest/en/users-and-permissions/devops/configuring-a-password-policy.html": "dxp/latest/en/users-and-permissions/roles-and-permissions/configuring-a-password-policy.html",
+	"dxp/latest/ja/developing-applications/data_frameworks.html" : "dxp/latest/ja/developing-applications/data-frameworks.html",
 	"dxp/latest/ja/developing-applications/core_frameworks.html" : "dxp/latest/en/developing-applications/core-frameworks.html",
 	"dxp/latest/ja/developing-applications/core-frameworks/message-bus/message-bus.md" : "dxp/latest/ja/developing-applications/core-frameworks/message-bus.md",
 	"dxp/latest/ja/developing-applications/developing_a_java_web_application.html" : "dxp/latest/ja/developing-applications/developing-a-java-web-application.html",
@@ -59,6 +63,9 @@
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/running-scripts-in-containers.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-docker-images/running-scripts-in-containers.html",
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/upgrading-to-a-new-docker-image.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.html",
 	"dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_dxp_docker_images.html" : "dxp/latest/ja/installation-and-upgrades/installing-liferay/using_liferay_docker_images.html",
+	"dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-d
+	"dxp/latest/ja/developing-applications/data_frameworks.html" : "dxp/latest/ja/developing-applications/data-frameworks.html",xp-installation/maintaining_clustered_installations.html" : "dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations.html",
+	"dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.html" : "dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/maintaining-clustered-installations.html",
 	"dxp/latest/ja/installation-and-upgrades/reference/liferay-upgrade-planner-steps.html": "dxp/latest/ja/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html",
 	"dxp/latest/ja/installation-and-upgrades/setting_up_liferay_dxp.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay.html",
 	"dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering_for_high_availability.html" : "dxp/latest/ja/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.html",
@@ -80,7 +87,5 @@
 	"dxp/latest/ja/liferay-internals/fundamentals/fundamentals.html" : "dxp/latest/ja/liferay-internals/fundamentals.html",
 	"dxp/latest/ja/liferay-internals/fundamentals/understanding-module-projects.html" : "dxp/latest/ja/liferay-internals/fundamentals/module-projects.html",
 	"dxp/latest/ja/liferay-internals/fundamentals/using-felix-gogo-shell.html" : "dxp/latest/ja/liferay-internals/fundamentals/using-the-gogo-shell.html",
-	"dxp/latest/en/developing-applications/data_frameworks.html" : "dxp/latest/en/developing-applications/data-frameworks.html",
-	"dxp/latest/ja/developing-applications/data_frameworks.html" : "dxp/latest/ja/developing-applications/data-frameworks.html",
 	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }
