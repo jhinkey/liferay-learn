@@ -45,6 +45,13 @@
 	"dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading_custom_development.html" : "dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrading-custom-development.html",
 	"dxp/latest/en/site-building/site-appearance/using-a-style-book-to-standardize-site-appearance.html": "dxp/latest/en/site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.html",
 	"dxp/latest/en/site-building/site-appearance/developer-guide/style-book-token-definitions.html": "dxp/latest/en/site-building/site-appearance/style-books/developer-guide/style-book-token-definitions.html",
+	"dxp/latest/en/system-administration/file_storage.html" : "dxp/latest/en/system-administration/file-storage.html",
+	"dxp/latest/en/system-administration/file-storage/other_file_store_types.html" : "dxp/latest/en/system-administration/file-storage/other-file-store-types.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/installing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/managing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/managing-apps.html",
+	"dxp/latest/en/system-administration/installing-and-managing-apps/getting_started.html" : "dxp/latest/en/system-administration/installing-and-managing-apps.html",
+	"dxp/latest/en/system-administration/using-the-script-engine/using-the-script-engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html",
+	"dxp/latest/en/system-administration/using_the_script_engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html",
 	"dxp/latest/en/users-and-permissions/devops/adding-custom-fields-to-users.html": "dxp/latest/en/users-and-permissions/users/adding-custom-fields-to-users.html",
 	"dxp/latest/en/users-and-permissions/devops/configuring-a-password-policy.html": "dxp/latest/en/users-and-permissions/roles-and-permissions/configuring-a-password-policy.html",
 	"dxp/latest/ja/developing-applications/core_frameworks.html" : "dxp/latest/en/developing-applications/core-frameworks.html",
@@ -82,12 +89,5 @@
 	"dxp/latest/ja/liferay-internals/fundamentals/using-felix-gogo-shell.html" : "dxp/latest/ja/liferay-internals/fundamentals/using-the-gogo-shell.html",
 	"dxp/latest/en/developing-applications/data_frameworks.html" : "dxp/latest/en/developing-applications/data-frameworks.html",
 	"dxp/latest/ja/developing-applications/data_frameworks.html" : "dxp/latest/ja/developing-applications/data-frameworks.html",
-	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html",
-	"dxp/latest/en/system-administration/file_storage.html" : "dxp/latest/en/system-administration/file-storage.html",
-	"dxp/latest/en/system-administration/file-storage/other_file_store_types.html" : "dxp/latest/en/system-administration/file-storage/other-file-store-types.html",
-	"dxp/latest/en/system-administration/installing-and-managing-apps/installing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html",
-	"dxp/latest/en/system-administration/installing-and-managing-apps/managing_apps.html" : "dxp/latest/en/system-administration/installing-and-managing-apps/managing-apps.html",
-	"dxp/latest/en/system-administration/installing-and-managing-apps/getting_started.html" : "dxp/latest/en/system-administration/installing-and-managing-apps.html",
-	"dxp/latest/en/system-administration/using-the-script-engine/using-the-script-engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html",
-	"dxp/latest/en/system-administration/using_the_script_engine.html" : "dxp/latest/en/system-administration/using-the-script-engine.html"
+	"dxp-cloud/latest/en/troubleshooting/log-management.html": "dxp-cloud/latest/en/troubleshooting/reading-dxp-cloud-service-logs.html"
 }
