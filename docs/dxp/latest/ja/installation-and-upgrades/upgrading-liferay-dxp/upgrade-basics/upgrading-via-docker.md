@@ -8,7 +8,7 @@ Dockerデスクトップは[こちら](https://www.docker.com/products/docker-de
 ```
 
 ``` warning::
-   アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-dxp-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+   アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 ## 最新のDockerイメージによるアップグレード
@@ -84,4 +84,4 @@ Liferay DXPデータベースのアップグレードが完了しました。
 
   - [Custom Code Upgrade](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2)では、開発したカスタムプラグインコードを新しいDXPバージョンに適合させる方法を示しています。
 
-  - [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)では、クラスター環境でDXPをアップグレードする方法について説明しています。
+  - [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)では、クラスター環境でDXPをアップグレードする方法について説明しています。

@@ -9,7 +9,7 @@ DXPインストールの複雑さと規模は、DXPをアップグレードす�
   - [データベースのアップグレードの実行](#executing-the-database-upgrade)
 
 ``` warning::
-   アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-dxp-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+   アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 ## 準備と計画
@@ -100,4 +100,4 @@ DXPのアップグレードコンポーネントについて理解したので�
 さらに、アップグレードに関連する以下のアップグレードシナリオを参照してください。
 
   - [Upgrading a Sharded Environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md)
-  - [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+  - [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)
