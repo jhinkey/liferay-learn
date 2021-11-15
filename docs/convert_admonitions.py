@@ -73,7 +73,7 @@ if __name__ == "__main__":
     
     results = open(article, "w")
 
-    print("First line:\n" + line_list[0])
+    print(article + "\n")
     
     admonition = False
     whitespace = ""
