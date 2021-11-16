@@ -1,6 +1,6 @@
 # Building Forms with AUI Tags
 
-The  [AUI tag library](https://docs.liferay.com/portal/7.2-latest/taglibs/util-taglib/aui/tld-summary.html)  provides all the components you need to build forms for your applications. AUI  tags provide many benefits to standard form elements, such as custom  namespacing, localization, and even validation. They provide multiple attributes  that let you create the experience you want for your users. 
+The [AUI tag library](https://docs.liferay.com/portal/7.2-latest/taglibs/util-taglib/aui/tld-summary.html) provides all the components you need to build forms for your applications. AUI tags provide many benefits to standard form elements, such as custom namespacing, localization, and even validation. They provide multiple attributes that let you create the experience you want for your users. 
 
 Follow these steps to build a form using AUI tags:
 
@@ -10,7 +10,7 @@ Follow these steps to build a form using AUI tags:
     <%@ taglib prefix="aui" uri="http://liferay.com/tld/aui" %>
     ```
 
-1. Build your form using the tags shown below. Each tag links to the  corresponding taglibdoc that list the available attributes:
+1. Build your form using the tags shown below. Each tag links to the corresponding taglibdoc that list the available attributes:
 
     * [`<aui:input>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/input.html)
     * [`<aui:button>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/button.html)
@@ -61,9 +61,9 @@ Follow these steps to build a form using AUI tags:
     </aui:form>
     ```
 
-    ![Figure 1: The AUI tags provide everything you need to build forms for your applications.](./02-building-forms-with-aui-tags/images/aui-taglib-basic-form.png)
+    ![The AUI tags provide everything you need to build forms for your applications.](./building-forms-with-aui-tags/images/01.png)
 
-1. Optionally add validation to your form fields. Nest a `<aui:validator>` tag  inside each form field that you want to validate. Specify the validation  rule with the `<aui:validator>` tag's `name` attribute (The available  validation rules are shown in the table below). You can override a field's  default validation error message with the `errorMessage` attribute. An  example configuration is shown below:
+1. Optionally add validation to your form fields. Nest a `<aui:validator>` tag inside each form field that you want to validate. Specify the validation rule with the `<aui:validator>` tag's `name` attribute (The available validation rules are shown in the table below). You can override a field's default validation error message with the `errorMessage` attribute. An  example configuration is shown below:
 
     ```markup
     <aui:form name="myForm">
@@ -79,7 +79,7 @@ Follow these steps to build a form using AUI tags:
     </aui:form>
     ```
 
-    ![Figure 2: The AUI tags also provide validation for form fields.](./02-building-forms-with-aui-tags/images/aui-taglib-form-validation.png)
+    ![The AUI tags also provide validation for form fields.](./building-forms-with-aui-tags/images/02.png)
 
     The full list of available validation rules is shown in the table below:
 
@@ -102,10 +102,10 @@ Follow these steps to build a form using AUI tags:
     | `required` | Prevents a blank field  | 'This field is required.' |
     | `url` | Permits a URL value | 'Please enter a valid URL.' |
 
-Now you know how to build user-friendly forms for your applications. 
+Now you know how to build user-friendly forms for your applications.
 
 ## Related Topics
 
-* [Using the Chart Taglib in Your Portlets](/docs/7-2/reference/-/knowledge_base/r/using-the-chart-taglib-in-your-portlets)
+* [Using the Chart Taglib in Your Portlets](/docs/7-2/reference/-/knowledge_base/r/using-the-chart-taglib-in-your-portlets) <!--should I put a http link ? couldn't find it in Liferay learn >
 * [Using Liferay Front-end Taglibs in Your Portlet](/docs/7-2/reference/-/knowledge_base/r/using-liferay-front-end-taglibs-in-your-portlet)
 * [Using the Clay Taglib in Your portlets](/docs/7-2/reference/-/knowledge_base/r/using-the-clay-taglib-in-your-portlets)
