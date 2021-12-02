@@ -31,15 +31,21 @@ function main {
 		exit
 	fi
 
-	if  [ ! -d "${npm_modules_dir_name}/generator-liferay-fragments" ] ||
+	if  [ ! -d "${npm_modules_dir_name}/fusioncharts" ] ||
+		[ ! -d "${npm_modules_dir_name}/generator-liferay-fragments" ] ||
 		[ ! -d "${npm_modules_dir_name}/generator-liferay-js" ] ||
 		[ ! -d "${npm_modules_dir_name}/generator-liferay-theme" ] ||
+		[ ! -d "${npm_modules_dir_name}/react" ] ||
+		[ ! -d "${npm_modules_dir_name}/react-dom" ] ||
+		[ ! -d "${npm_modules_dir_name}/react-fusioncharts" ] ||
+		[ ! -d "${npm_modules_dir_name}/react-scripts" ] ||
+		[ ! -d "${npm_modules_dir_name}/sass" ] ||
 		[ ! -d "${npm_modules_dir_name}/yarn" ] ||
 		[ ! -d "${npm_modules_dir_name}/yo" ]
 	then
 		echo "A tutorial dependency is missing. Run this command:
 
-		npm install -g generator-liferay-fragments generator-liferay-js generator-liferay-theme yarn yo"
+		npm install -g fusioncharts generator-liferay-fragments generator-liferay-js generator-liferay-theme react react-dom react-fusioncharts react-scripts sass yarn yo"
 
 		exit
 	fi
