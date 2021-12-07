@@ -3,7 +3,7 @@
 0 /] [#if infoListDisplayObject?has_content] [#assign objectEntryId =
 infoListDisplayObject.getObjectEntryId() /] [/#if]
 
-<div class="kanban-list-body">
+<div class="q3r7-kanban-list-body">
 	<div data-objectid="${objectEntryId}" class="card card-task">
 		<div class="progress">
 			<div
@@ -13,7 +13,8 @@ infoListDisplayObject.getObjectEntryId() /] [/#if]
 				aria-valuenow="10"
 				aria-valuemin="0"
 				aria-valuemax="100"
-			></div>
+			>
+			</div>
 		</div>
 
 		<div class="card-body">
@@ -36,18 +37,22 @@ infoListDisplayObject.getObjectEntryId() /] [/#if]
 						/]
 					</button>
 					<div class="dropdown-menu dropdown-menu-right" style="">
-						<a class="dropdown-item" id="view" href="#"
-							>View Task</a
+						<a class="dropdown-item" id="view" href="#">
+							View Task
+						</a>
+						<a class="dropdown-item" id="status-todo" href="#">
+							Mark ToDo
+						</a>
+						<a
+							class="dropdown-item"
+							id="status-inprogress"
+							href="#"
 						>
-						<a class="dropdown-item" id="status-todo" href="#"
-							>Mark ToDo</a
-						>
-						<a class="dropdown-item" id="status-inprogress" href="#"
-							>Mark as In Progress</a
-						>
-						<a class="dropdown-item" id="status-done" href="#"
-							>Mark Done</a
-						>
+							Mark as In Progress
+						</a>
+						<a class="dropdown-item" id="status-done" href="#">
+							Mark Done
+						</a>
 					</div>
 				</div>
 			</div>
@@ -55,7 +60,9 @@ infoListDisplayObject.getObjectEntryId() /] [/#if]
 				<div class="col-10">
 					<div class="project-details">
 						<lfr-editable id="task-description" type="rich-text">
-							<p>Task description not mapped</p>
+							<p>
+								Task description not mapped
+							</p>
 						</lfr-editable>
 					</div>
 				</div>
@@ -65,7 +72,9 @@ infoListDisplayObject.getObjectEntryId() /] [/#if]
 							0
 						</lfr-editable>
 					</span>
-					<span>%</span>
+					<span>
+						%
+					</span>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-$('.kanban-list-body .dropdown-item')
+$('.q3r7-kanban-list-body .dropdown-item')
 	.off('click')
 	.on('click', function (e) {
 		var objectId = $(this).closest('.card-task').data('objectid');
@@ -37,7 +37,7 @@ function submitTaskUpdate(objectId, payload) {
 		});
 }
 
-$('.kanban-list-body .progress-value').each(function () {
+$('.q3r7-kanban-list-body .progress-value').each(function () {
 	let progessValue = $(this).text().trim();
 	$(this)
 		.closest('.card-task')
@@ -45,7 +45,7 @@ $('.kanban-list-body .progress-value').each(function () {
 		.css('width', progessValue + '%');
 });
 
-$('.kanban-list-body .progress')
+$('.q3r7-kanban-list-body .progress')
 	.off('click')
 	.on('click', function (e) {
 		var objectId = $(this).closest('.card-task').data('objectid');
