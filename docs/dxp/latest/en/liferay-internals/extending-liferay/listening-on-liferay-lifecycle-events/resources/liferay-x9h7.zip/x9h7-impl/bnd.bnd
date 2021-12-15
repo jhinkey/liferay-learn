@@ -1,0 +1,3 @@
+Bundle-Name: Acme X9H7 Implementation
+Bundle-SymbolicName: com.acme.x9h7.impl
+Bundle-Version: 1.0.0
